@@ -1,0 +1,23 @@
+ import=telegram.ext
+
+token="5655360729:AAHD33u_i3EBSuMU2-YRkP1aGff0GB3qkjI"
+
+updater=telegram.ext.updater("5655360729:AAHD33u_i3EBSuMU2-YRkP1aGff0GB3qkjI",use_context=true)
+dispatcher=updater.dispatcher
+
+def start (update,context):
+     update.message
+     .reply_text("Hello welcome to pokemon world") 
+    
+    def help (update,contex):update.message.reply_text("""/start->welcome to pokemon world 
+/help ->this particular messge
+/hunt -> to explore pokemon""")
+
+dispatcher.add_handler(telegram.ext.commandHandler('start',start)
+dispatcher.add_handler(telegram.ext.commandHandler('help',help)
+dispatcher.add_handler(telegram.ext.commandHandler('hunt',hunt)
+
+
+updater.start_polling()
+updater.idle()
+
